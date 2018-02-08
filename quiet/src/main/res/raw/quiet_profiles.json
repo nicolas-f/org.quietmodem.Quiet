@@ -1,22 +1,22 @@
 {
-  "audible": {
-    "mod_scheme": "gmsk",
-    "checksum_scheme": "crc32",
-    "inner_fec_scheme": "v27",
+  "noisecapture":{
+    "mod_scheme": "bpsk",
+    "checksum_scheme": "crc16",
+    "inner_fec_scheme": "rs8",
     "outer_fec_scheme": "none",
-    "frame_length": 100,
+    "frame_length": 32,
     "modulation": {
-      "center_frequency": 4200,
-      "gain": 0.1
+      "center_frequency": 4400,
+      "gain": 0.2
     },
     "interpolation": {
       "shape": "kaiser",
-      "samples_per_symbol": 10,
+      "samples_per_symbol": 20,
       "symbol_delay": 4,
-      "excess_bandwidth": 0.35
+      "excess_bandwidth": 1
     },
     "encoder_filters": {
-      "dc_filter_alpha": 0.01
+      "dc_filter_alpha": 0.1
     },
     "resampler": {
       "delay": 13,
@@ -27,7 +27,7 @@
   },
   "audible-7k-channel-0": {
     "mod_scheme": "arb16opt",
-    "checksum_scheme": "crc32",
+    "checksum_scheme": "crc16",
     "inner_fec_scheme": "rs8",
     "outer_fec_scheme": "v29",
     "frame_length": 600,
